@@ -43,11 +43,11 @@ function insertToSheet(url) {
   // スプレッドシートのIDを指定
   let spreadsheet = SpreadsheetApp.openById(SHEET_ID);
   // 書き込むシート名を指定
-  var sheet = spreadsheet.getSheetByName(SHEET_NAME);
+  let sheet = spreadsheet.getSheetByName(SHEET_NAME);
   // シートの最終行を取得
-  var lastrow = sheet.getLastRow();
+  let lastrow = sheet.getLastRow();
   // 最終行からデータを書き込む
-  var recordrow = lastrow + 1;
+  let recordrow = lastrow + 1;
 
   let today = new Date().toLocaleDateString();
   sheet.getRange("A" + recordrow).setValue(today);
